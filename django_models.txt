@@ -62,7 +62,7 @@ Author.objects.get(id=2).update_rating()
 9. Вывести, username и рейтинг лучшего пользователя,применяя сортировку и возвращая поля первого объекта.
 a = Author.objects.order_by('-rating')[:1]
 for i in a:
-    i.user_id.username
+    i.user.username
     i.rating
 
 10. Вывести дату добавления, username автора, рейтинг, заголовок и превью лучшей статьи, основываясь на лайках/дислайках к этой статье.
