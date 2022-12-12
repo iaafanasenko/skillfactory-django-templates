@@ -39,13 +39,13 @@ class Post(models.Model):
     text = models.TextField()
     rating = models.SmallIntegerField(default=0)
 
-    news = 'N'
-    article = 'A'
+    NEWS = 'N'
+    ARTICLE = 'A'
     TYPES = (
-        (news, 'НОВОСТЬ'),
-        (article, 'СТАТЬЯ')
+        (NEWS, 'НОВОСТЬ'),
+        (ARTICLE, 'СТАТЬЯ'),
     )
-    category_type = models.CharField(max_length=1, choices=TYPES, default=article)
+    category_type = models.CharField(max_length=1, choices=TYPES, default=ARTICLE)
 
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     post_category = models.ManyToManyField(Category, through='PostCategory')
