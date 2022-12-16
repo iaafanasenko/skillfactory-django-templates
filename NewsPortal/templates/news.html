@@ -1,0 +1,35 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+Все статьи
+{% endblock title %}
+
+{% block content %}
+    <h1 class="page_header">Новости</h1>
+    <div class="posts_count">Количество доступных статей: {{ news|length }}</div>
+    {% if news %}
+        <table class="posts_table">
+        <col style="width: 50%;">
+        <col style="width: 30%;">
+        <col style="width: 20%;">
+        <tr>
+            <th>Название статьи или новости</th>
+            <th>Начало текста</th>
+            <th>Время публикации</th>
+        </tr>
+        {% for post in news %}
+            <tr>
+                <td>
+                    <a href={{ post.pk }}>{{ post.title|censor }}</a>
+                </td>
+                <td>{{ post.text|censor|truncatechars:20 }}</td>
+                <td>{{ post.created_at|date:'d.m.Y ' }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+   {% else %}
+        <h2>Свежих статей нет.</h2>
+   {% endif %}
+{% endblock content %}
