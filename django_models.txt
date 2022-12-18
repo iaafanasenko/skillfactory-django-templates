@@ -66,7 +66,7 @@ for i in a:
     i.rating
 
 10. Вывести дату добавления, username автора, рейтинг, заголовок и превью лучшей статьи, основываясь на лайках/дислайках к этой статье.
-Post.objects.order_by('-rating').values('created_at','author__authorUser__username','rating','text','title')[0]
+Post.objects.order_by('-rating').values('created_at','author__user__username','rating','text','title')[0]
 
 Preview:
 

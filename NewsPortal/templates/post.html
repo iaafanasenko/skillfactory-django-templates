@@ -1,16 +1,16 @@
-{% extends 'flatpages/default.html' %}
+{% extends 'default.html' %}
 
 {% load custom_filters %}
 
 {% block title %}
-Статья
+    Статья
 {% endblock title %}
 
 {% block content %}
-    <h1 class="page_header">Информация о статье</h1>
-
-   <div class="post_header">{{ post.title|censor }}</div>
-   <div class="post_text">{{ post.text|censor }}</div>
-   <div class="post_date">{{ post.created_at|date:'d.m.Y' }}</div>
-
+    <h1 class="page-header">Информация о статье</h1>
+    <div class="page-content">
+        <div class="post-header">{{ post.title|censor }}</div>
+        <div class="post-text">{{ post.text|censor }}</div>
+        <div class="post-date">{{ post.created_at|date:'d.m.Y' }}</div>
+    </div>
 {% endblock content %}

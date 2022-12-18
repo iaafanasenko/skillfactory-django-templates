@@ -1,4 +1,4 @@
-.page_header {
+.page-header {
     font-weight: 700;
     font-size: 32px;
     /*background-color: #D9EAF7;*/
@@ -7,41 +7,44 @@
     border-bottom: 3px #000000 solid;
 }
 
-.posts_count {
+.page-content {
+    margin-top: 30px;
+}
+
+.posts-count {
     text-align: right;
 }
 
-.posts_table {
-    margin-top: 30px;
+.posts-table {
     width: 100%;
 }
 
-.posts_table th {
-    padding: 10px;
-    border-bottom: 2px #CCCCCC dashed;
+.posts-table th {
+    padding: 20px;
+    border-bottom: 1px #CCCCCC solid;
     font-weight: 700;
     text-align: center;
 }
 
-.posts_table td {
-    padding: 10px;
-    border-bottom: 2px #CCCCCC dashed;
+.posts-table td {
+    padding: 20px;
+    border-bottom: 1px #CCCCCC solid;
     text-align: center;
 }
 
-.post_header {
+.post-header {
     text-align: left;
     font-size: 18px;
     font-weight: 700;
 }
 
-.post_text {
+.post-text {
     text-align: left;
     font-size: 16px;
     font-weight: 400;
 }
 
-.post_date {
+.post-date {
     text-align: right;
     font-size: 14px;
     font-weight: 400;
